@@ -86,13 +86,14 @@ correspondent EPSS and CVSS (v4.0, v3.x and 2.0) scores, known exploits
 -- 2022-05-10 - Added "advisories"
 -- 2025-02-25 - Added CVSS v4.0 and EPSS support
 -- 2025-03-07 - First public release
+-- 2025-03-10 - FIX exploits sorting
 
 author     = 'giuseppe DOT diterlizzi AT gmail DOT com'
 license    = "Same as Nmap--See https://nmap.org/book/man-legal.html"
 categories = {"vuln", "safe", "external"}
 
 
-local PLUGIN_VERSION = "25.03.0"
+local PLUGIN_VERSION = "25.3.1"
 local BASE_URL       = stdnse.get_script_args(SCRIPT_NAME .. '.url') or 'https://secdb.nttzen.cloud'
 local MIN_CVSS_SCORE = stdnse.get_script_args(SCRIPT_NAME .. '.mincvss')
 
@@ -145,10 +146,10 @@ local vuln_meta = {
     if (#exploits > 0) then
 
       output = output .. "\n\tKnown Exploits (*)\n\n"
-      output = output .. ("\t%-10s\t%-10s\n"):format('Type', 'ID')
+      output = output .. ("\t%-10s\t%-25s\n"):format('Type', 'ID')
       output = output .. "\t------------------------------------------------------------\n"
 
-      table.sort(exploits, function(a, b) return a.id < b.id end)
+      table.sort(exploits, function(a, b) return tostring(a.id) < tostring(b.id) end)
 
       local _exploits = {}
 

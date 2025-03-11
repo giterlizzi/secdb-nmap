@@ -10,8 +10,6 @@ SecDB Nmap plugin retrieves known vulnerability, exploit and advisory informatio
 
 **NOTE:** The script depends on having software versions at hand, so it only works with `-sV` flag.
 
-### Example
-
 The output of the Nmap is like the following:
 
 ![Result example](example.png)
@@ -25,19 +23,16 @@ The output of the Nmap is like the following:
 
 ## Installation
 
-Locate where your nmap scripts are located on your system:
-
-- for *nix system it might be `~/.nmap/scripts/` or `$NMAPDIR`
-- for Mac it might be `/usr/local/Cellar/nmap/<version>/share/nmap/scripts/`
-- for Windows it might be `C:\Program Files (x86)\Nmap\scripts`
-
-Copy the `secdb.nse` script into that directory.
-
-Run `nmap --script-updatedb` to update the Nmap script DB 
+* Locate where your nmap scripts are located on your system:
+  - for *nix system it might be `~/.nmap/scripts/` or `$NMAPDIR`
+  - for Mac it might be `/usr/local/Cellar/nmap/<version>/share/nmap/scripts/`
+  - for Windows it might be `C:\Program Files (x86)\Nmap\scripts`
+* Copy the `secdb.nse` script into that directory.
+* Run `nmap --script-updatedb` to update the Nmap script DB 
 
 ### Dependencies
 
-SecDB Nmap plugin uses these nmap libraries:
+SecDB Nmap plugin uses these Nmap libraries:
 
 - http
 - json
