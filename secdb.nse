@@ -44,7 +44,7 @@ correspondent EPSS and CVSS (v4.0, v3.x and 2.0) scores, known exploits
 -- @xmloutput
 -- <table key="vsftpd 2.3.4">
 --   <table>
---     <elem key="url">http://localhost:3000/cve/detail/CVE-2011-2523</elem>
+--     <elem key="url">https://secdb.nttzen.cloud/cve/detail/CVE-2011-2523</elem>
 --     <elem key="epss">0.50348</elem>
 --     <table key="cvss_v2">
 --       <elem key="score">10.0</elem>
@@ -55,13 +55,13 @@ correspondent EPSS and CVSS (v4.0, v3.x and 2.0) scores, known exploits
 --     <table key="exploits">
 --       <table>
 --         <elem key="cve_id">CVE-2011-2523</elem>
---         <elem key="url">http://localhost:3000/exploit-db/detail/17491</elem>
+--         <elem key="url">https://secdb.nttzen.cloud/exploit-db/detail/17491</elem>
 --         <elem key="id">17491</elem>
 --         <elem key="type">Exploit DB</elem>
 --       </table>
 --       <table>
 --         <elem key="cve_id">CVE-2011-2523</elem>
---         <elem key="url">http://localhost:3000/exploit-db/detail/49757</elem>
+--         <elem key="url">https://secdb.nttzen.cloud/exploit-db/detail/49757</elem>
 --         <elem key="id">49757</elem>
 --         <elem key="type">Exploit DB</elem>
 --       </table>
